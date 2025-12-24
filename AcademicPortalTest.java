@@ -36,8 +36,26 @@ public class AcademicPortalTest {
             System.out.println("\n Created 5 Students and 3 Faculty members.");
 
             // ============= DEMONSTRATE POLYMORPHISM & STATIC MEMBERS ======================
-            System.out.println("\n PHASE 2: DEMONSTRATING POLYMORPHISM & STATIC MEMBERS");
+            System.out.println("\n🎭  PHASE 2: DEMONSTRATING POLYMORPHISM & STATIC MEMBERS");
+            System.out.println("--------------------------------------------");
+            
+            // Add both Students and Faculty to the Same ArrayList<Person>(Polymorphism)
+            System.out.println("\nAdding all members to static all Members list:");
+
+            System.out.println("-------------------------------------");
+
+            Portal.addPerson(student1);
+            Portal.addPerson(student2);
+            Portal.addPerson(student3);
+            Portal.addPerson(student4);
+            Portal.addPerson(student5);
+            Portal.addPerson(facult1);
+            Portal.addPerson(faculty2);
+            Portal.addPerson(faculty3);
 
             
+
+
+
     }
 }
