@@ -25,5 +25,19 @@ public class AcademicPortalTest {
         Student student3 = new Student("S003", "Bontu Solomon", "bonisolomon13@ambou.edu.et", "Electrical Engineering");
         Student student4 = new Student("S004", "Simera Lamesa", "simeralamesa@ambou.edu.et", "Civil Engineering");
         Student student5 = new Student("S005", "Roba Taresa", "robataresa43@ambou.edu.et", "Urban Engineering");
+
+        System.out.println("-----------------------------");
+
+        //Create Students (inherits from Person)
+        Faculty facult1 = new Faculty("F001", "Dr.Gemachis", "gemachis@ambou.edu.et", "Data Science", "Data Scientist");
+        Faculty faculty2 = new Faculty("F002", "Prof.Ebisa", "ebisa@edu.et", "SoftWare Engineering", "Associate Professor");
+        Faculty faculty3 = new Faculty("F003", "Mr.Debela", "debela1@edu.edu.et", "Electrical Engineering", "Lecturer");
+
+            System.out.println("\n Created 5 Students and 3 Faculty members.");
+
+            // ============= DEMONSTRATE POLYMORPHISM & STATIC MEMBERS ======================
+            System.out.println("\n PHASE 2: DEMONSTRATING POLYMORPHISM & STATIC MEMBERS");
+
+            
     }
 }
