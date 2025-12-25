@@ -53,9 +53,39 @@ public class AcademicPortalTest {
             Portal.addPerson(faculty2);
             Portal.addPerson(faculty3);
 
-            
+            // Try to add duplicate (should show error)
+            System.out.println("\nTrying to add duplicate ID (Testing validation):");
+            Portal.addPerson(new Student("S001", "Duplicate", "dup@edu.et", "English"));
+            System.out.println("\n Total Members in system: " + Portal.getTotalMembers() + " (Static member accessed)");
 
+            //Display all members (Polymorphic method calls)
+            System.out.println("\nDisplaying all members polymorphic display info() calls):");
 
+            System.out.println("------------------------------------------");
+            Portal.displayAllMembers();
 
+            // ================= DEMONSTRATE ENCAPSULATION ==================
+            System.out.println(" PHASE 3: DEMONSTRATING ENCAPSULATION");
+            System.out.println("-------------------------------------------");
+
+         // Accessing private fields through public getters/setters
+         System.out.println("\nAccessing and modifying private fields through getters/setters:");
+         
+         System.out.println("Before Update - Student 1 GPA: " + student1.getGpa());
+         student1.setGpa(3.9);
+         System.out.println("After update - Student 1 GPA: " + student1.getGpa());
+         
+         // Try invalid GPA (Validation in setter)
+         System.out.println("\n PHASE 4: CREATING COURSE");
+         System.out.println("--------------------------");
+
+         Course oopCourse = new Course("CSO201", "Object-Oriented Programming", 3);
+         Course dataBase = new Course("CSD201", "Fundamental Data Base", 3);
+         Course linearAlgebra = new Course("CSL201", "Linear Algebra", 3);
+         Course statics = new Course("CST201", "Statics & Probability", 3);
+         
+
+         //Add Courses to Portal
+         academicPortal.addCourse();
     }
 }
