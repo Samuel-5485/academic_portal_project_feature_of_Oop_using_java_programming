@@ -1,5 +1,6 @@
 package AcademicPortal;
 
+
 public class AcademicPortalTest {
     public static void main(String[] args) {
         System.out.println(" ============================== ");
@@ -51,7 +52,7 @@ public class AcademicPortalTest {
             Portal.addPerson(student3);
             Portal.addPerson(student4);
             Portal.addPerson(student5);
-            Portal.addPerson(facult1);
+            Portal.addPerson(faculty1);
             Portal.addPerson(faculty2);
             Portal.addPerson(faculty3);
              Portal.addPerson(faculty4);
@@ -183,12 +184,31 @@ public class AcademicPortalTest {
 
 
         // ==================== FINAL SYSTEM SUMMARY ==================
-        
+        System.out.println("\n PHASE 9: FINAL SYSTEM SUMMARY");
+        System.out.println("----------------------------------------");
 
+        System.out.println("\n=== SYSTEM STATISTICS ===");
+        System.out.println("Total Members: " + Portal.getTotalMembers());
+        System.out.println("Total Courses: " + academicPortal.getAllCoursesCount());
 
+        System.out.println("=============================================");
+        System.out.println("\n=== ALL COURSES ===");
+        academicPortal.displayAllCourses();
 
+        System.out.println("===================================");
+        System.out.println(" TEST COMPLETED SUCCESSFULLY!!!");
+        System.out.println("=======================================\n");
 
-         
+        System.out.println(" OOP CONCEPTS DEMONSTRATION:");
+        System.out.println(" Inheritance (Student/Faculty extends Person)");
+        System.out.println(" Polymorphism (ArrayList<Person> holds differen types");
+        System.out.println(" Static Members (allMembers shared across System)");
+        System.out.println(" Encapsulation (private fields with getthers/setters)");
+        System.out.println(" ArrayList Management (Dynami collections)");
+        System.out.println("\n Project 8: Academic Portal - READY FOR SUBMISSION!");
 
     }
-}
+    // helper method to get course count(nedds to be added to Portal class)
+    // If you want this to work, add this method to Portal.java:
+    // public int getAllCoursesCount() {return allCourses.size();}
+ }

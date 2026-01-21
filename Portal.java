@@ -1,5 +1,6 @@
 package AcademicPortal;
 import java.util.ArrayList;
+
 public class Portal{
     //=================Static Members (Class-Level)==========
     /*
@@ -8,7 +9,7 @@ public class Portal{
          1.Static member (shared across all Portal instances) 
          2.polymorphism (Student and Faculty stored as Person)
     */
-   private static ArrayList<Person> allMembers = new ArrayList();
+   private static ArrayList<Person> allMembers = new ArrayList<Person>();
    
       //=================Instance Members===================
       /**
@@ -57,6 +58,9 @@ public class Portal{
      * Displays all members in the system (Students and Faculty).
      * Static method - can be called without creating Portal object.
      */
+    public int getAllCoursesCount(){
+        return allCourses.size();
+    }
     public static void displayAllMembers(){
         System.out.println("\n ======== ALL SYSTEM MEMBERS =========");
         System.out.println("Total Members: " + allMembers.size());
@@ -175,14 +179,14 @@ public class Portal{
         System.out.println(" GPA for " + student.getName() + ": " + currentGPA);
         return currentGPA;
     }
-    /**
-     * Assigns a faculty member to teach a course.
-     * @param facultyId The faculty member's ID
-     * @param courseId The course ID
-     */
+    
+     // Assigns a faculty member to teach a course.
+      // @param facultyId The faculty member's ID
+      // @param courseId The course ID
+     
     public void assignFaculyToCourse(String facultyId, String courseId){
         //1. Find the faculty
-        Person person = findPerson(facultyId){
+        Person person = findPerson(facultyId);
             if(person == null){
                 System.out.println("Faculty with ID " + facultyId + " not found!");
                 return;
@@ -190,7 +194,7 @@ public class Portal{
 
             Faculty faculty = (Faculty) person;
             //3.Find th course
-        Course course = findCourse(courseId){
+        Course course = findCourse(courseId);
             if(course == null){
                 System.out.println(" Course with ID " + courseId + " not found!");
                 return;
@@ -221,7 +225,7 @@ public class Portal{
      * Gets the total number of members in the system.
      * @return Count of all members
      */
-        pubic static int getTotalMembers(){
+        public static int getTotalMembers(){
             return allMembers.size();
         }
     /**
@@ -231,6 +235,6 @@ public class Portal{
    public static void clearAllMembers(){
     allMembers.clear();
     System.out.println("All members cleared from system.");
-
+        
    }
     }

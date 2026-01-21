@@ -37,6 +37,10 @@ public class Student extends Person{
     public ArrayList<Course> getEnrolledInCourses(){
         return enrolledInCourses;
     }
+    //method fot getGpa
+    public double getGpa() {
+    return gpa;
+}
 
     // --------- Student Specific Methods ------------
     public void enrollInCourse(Course course){
